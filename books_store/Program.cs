@@ -8,6 +8,8 @@ builder.Services.AddDbContext<books_storeContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(1); });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,8 +23,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseSession();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=UsersAccounts}/{action=Login}/{id?}");
 
 app.Run();

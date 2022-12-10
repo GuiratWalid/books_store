@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\Core computer science.jpg"
     },
     {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\Deleting DYSTOPIA.png",
+      "PackagePath": "staticwebassets\\images\\Deleting DYSTOPIA.png"
+    },
+    {
       "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

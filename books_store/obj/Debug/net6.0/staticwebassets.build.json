@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XbxzgnAs5ZsGsCpFCf0y8tTM37kTindlgzvBtg4NLkU=",
+  "Hash": "Q5xbM7AAII14W260XhaIDJ7WI7bwFLlgIoN8o9xccbE=",
   "Source": "books_store",
   "BasePath": "_content/books_store",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Core computer science.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\Deleting DYSTOPIA.png",
+      "SourceId": "books_store",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\",
+      "BasePath": "_content/books_store",
+      "RelativePath": "images/Deleting DYSTOPIA.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Deleting DYSTOPIA.png"
     },
     {
       "Identity": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\js\\site.js",

@@ -15,5 +15,7 @@ namespace books_store.Data
         }
 
         public DbSet<books_store.Models.Book> Book { get; set; } = default!;
+
+        public DbSet<books_store.Models.UsersAccounts> UsersAccounts { get; set; }
     }
 }
