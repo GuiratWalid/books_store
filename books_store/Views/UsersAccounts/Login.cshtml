@@ -11,22 +11,27 @@
 @{
     Layout = null;
 }
-<div class="m-5 p-5  bg-light">
+<div class="m-5 p-5 bg-light rounded-3">
 
-<h1 class="text-center">Login</h1>
-<hr />
-<form asp-action="Login">
-    <div class="form-group">
-        <label class="control-label">Username</label>
-        <input name="na" class="form-control" />
+    <h1 class="text-center">Login</h1>
+    <hr />
+    <div class="d-flex justify-content-center">
+        <form asp-action="Login">
+            <div class="form-group">
+                <label class="control-label">Username</label>
+                <input name="na" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="pa" class="control-label">Password</label>
+                <input name="pa" type="password" class="form-control" /> <br />
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Login" class="btn btn-secondary ml-3 px-5 py-2 text-white" />
+            </div>
+            <p style="color:red"> @ViewData["message"]</p>
+        </form>
     </div>
-    <div class="form-group">
-        <label for="pa" class="control-label">Password</label>
-        <input name="pa" type="password" class="form-control" /> <br />
+    <div class="d-flex justify-content-center">
+        <a asp-action="Create" class="text-center">You don't have an account ?</a>
     </div>
-        <input type="submit" value="Login" class="btn btn-secondary mx-auto px-5 py-2 text-white" />
-
-    <p style="color:red"> @ViewData["message"]</p>
-</form>
-    <a asp-action="Create" class="text-center">You don't have an account ?</a>
 </div>

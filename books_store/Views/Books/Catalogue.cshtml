@@ -6,23 +6,27 @@
 @{
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
-<h1>Catalogue</h1>
-
-<div class="container-fluid">
+<h1 class="text-center">Catalogue</h1>
+<hr/>
+<div class="container-fluid ">
     <div class="row">
         @foreach (var item in Model)
         {
-            <div class="col-md-3">
+            <div class="col-md-3 my-2">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-center">
                         @item.title
                     </div>
                     <div class="card-body">
-                        <img src="~/images/@item.imgfile" height="150" /> <br />
-                        price:@item.price
+                        <img src="~/images/@item.imgfile" height="350" width=" 220" /> <br />
+                        <div class="d-flex justify-content-center">
+                            Price: @item.price DT
+                        </div>
                     </div>
                     <div class="card-footer">
-                        <a asp-controller="Orders" asp-action="Create" asp-route-id="@item.Id">Buy</a>
+                        <div class="d-flex justify-content-center">
+                            <a asp-controller="Orders" asp-action="Create" asp-route-id="@item.Id" class="btn btn-outline-dark py-1 px-3 text-center">Buy</a>
+                        </div>
                     </div>
                 </div>
             </div>

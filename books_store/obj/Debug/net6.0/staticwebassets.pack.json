@@ -21,6 +21,38 @@
       "PackagePath": "staticwebassets\\images\\Deleting DYSTOPIA.png"
     },
     {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img1.jpg",
+      "PackagePath": "staticwebassets\\images\\img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img2.jpg",
+      "PackagePath": "staticwebassets\\images\\img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img3.jpg",
+      "PackagePath": "staticwebassets\\images\\img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img4.jpg",
+      "PackagePath": "staticwebassets\\images\\img4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img5.jpg",
+      "PackagePath": "staticwebassets\\images\\img5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img6.jpg",
+      "PackagePath": "staticwebassets\\images\\img6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img7.jpg",
+      "PackagePath": "staticwebassets\\images\\img7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\images\\img8.jpg",
+      "PackagePath": "staticwebassets\\images\\img8.jpg"
+    },
+    {
       "Id": "C:\\Users\\Walid\\source\\repos\\books_store\\books_store\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

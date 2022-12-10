@@ -4,54 +4,60 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="text-center">Book Details</h1>
+<hr />
+<dl class="row">
 
-<div>
-    <h4>Book</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+    <div class="col-xl-5 col-sm-12">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.title)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.title)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.info)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.info)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.bookquantity)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.bookquantity)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.price)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.price)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.price) DT
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.cataid)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.cataid)
-        </dd>
-        <dt class = "col-sm-2">
+
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.author)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.author)
         </dd>
+    </div>
+    <div class="col-xl-5 col-sm-12">
+        <dt>
+            Picture
+        </dt>
         <dd>
-            <img src="~/images/@Model.imgfile" height="150" />
+            <img src="~/images/@Model.imgfile" height="350" weight="200" />
             <br />@Model.imgfile
+
         </dd>
-    </dl>
-</div>
+    </div>
+</dl>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
