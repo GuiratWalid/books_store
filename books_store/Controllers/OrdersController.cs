@@ -66,8 +66,13 @@ namespace books_store.Controllers
             order.bookId = bookId;
             order.quantity = quantity;
 
+            Console.WriteLine(order);
+            Console.WriteLine(order.quantity.ToString());
+
             order.userid = Convert.ToInt32(HttpContext.Session.GetString("userid")); ;
             order.orderdate = DateTime.Today;
+
+            Console.WriteLine(order.orderdate);
             _context.Add(order);
             await _context.SaveChangesAsync();
 

@@ -89,6 +89,14 @@ namespace books_store.Controllers
             }
         }
 
+        public IActionResult Logout()
+        {
+             HttpContext.Session.SetString("Name", "");
+             HttpContext.Session.SetString("Role", "");
+             HttpContext.Session.SetString("userid", "");
+             return RedirectToAction("Login");
+        }
+
 
         // POST: UsersAccounts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -135,11 +143,9 @@ namespace books_store.Controllers
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
-            {
                 try
                 {
+                    usersAccounts.role = "customer";
                     _context.Update(usersAccounts);
                     await _context.SaveChangesAsync();
                 }
@@ -154,9 +160,7 @@ namespace books_store.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Login));
-            }
-            return View(usersAccounts);
+                return RedirectToAction("Catalogue"); 
         }
 
         // GET: UsersAccounts/Delete/5
