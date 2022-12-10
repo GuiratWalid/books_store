@@ -267,3 +267,4 @@ C:\Users\Walid\source\repos\books_store\books_store\obj\Debug\net6.0\refint\book
 C:\Users\Walid\source\repos\books_store\books_store\obj\Debug\net6.0\books_store.pdb
 C:\Users\Walid\source\repos\books_store\books_store\obj\Debug\net6.0\books_store.genruntimeconfig.cache
 C:\Users\Walid\source\repos\books_store\books_store\obj\Debug\net6.0\ref\books_store.dll
+C:\Users\Walid\source\repos\books_store\books_store\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout1.cshtml.rz.scp.css

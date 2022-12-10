@@ -97,14 +97,14 @@ namespace books_store.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,name,pass,email")] UsersAccounts usersAccounts)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 usersAccounts.role = "customer";
                 _context.Add(usersAccounts);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Login));
-            }
-            return View(usersAccounts);
+            //}
+            //return View(usersAccounts);
         }
 
         // GET: UsersAccounts/Edit/5

@@ -24,6 +24,10 @@ namespace books_store.Controllers
         {
               return View(await _context.Book.ToListAsync());
         }
+        public async Task<IActionResult> Catalogue()
+        {
+            return View(await _context.Book.ToListAsync());
+        }
 
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
