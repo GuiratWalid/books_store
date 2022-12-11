@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using books_store.Data;
 using books_store.Models;
 using Microsoft.Data.SqlClient;
+using books_store.Configurations;
 
 namespace books_store.Controllers
 {
@@ -59,7 +60,9 @@ namespace books_store.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(string na, string pa)
         {
-            SqlConnection conn1 = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Walid\\Documents\\books_store.mdf;Integrated Security=True;Connect Timeout=30");
+            //SqlConnection conn1 = DBConnection.GetInstance;
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Walid\\Documents\\books_store.mdf;Integrated Security=True;Connect Timeout=30";
+            SqlConnection conn1 = new SqlConnection(connectionString);
             string sql;
             sql = "SELECT * FROM usersaccounts where name ='" + na + "' and  pass ='" + pa + "' ";
             SqlCommand comm = new SqlCommand(sql, conn1);
