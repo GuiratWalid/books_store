@@ -91,20 +91,20 @@ namespace books_store.Controllers
         public async Task<IActionResult> MyOrders()
         {
             int id = Convert.ToInt32(HttpContext.Session.GetString("userid")); ;
-            var orItems = await _context.Order.FromSqlRaw("select *  from orders where  userid = '" + id + "'  ").ToListAsync();
+            var orItems = await _context.Order.FromSqlRaw("select *  from [order] where  userid = '" + id + "'").ToListAsync();
             return View(orItems);
         }
 
         public async Task<IActionResult> CustomerOrders(int? id)
         {
-            var orItems = await _context.Order.FromSqlRaw("select *  from orders where  userid = '" + id + "'  ").ToListAsync();
+            var orItems = await _context.Order.FromSqlRaw("select *  from [order] where  userid = '" + id + "'").ToListAsync();
             return View(orItems);
         }
 
 
         public async Task<IActionResult> CustomerReport()
         {
-            var orItems = await _context.Report.FromSqlRaw("select usersaccounts.id as Id, name as customername, sum (quantity * Price)  as total from book, orders,usersaccounts  where usersaccounts.id = orders.userid  and bookid= book.Id group by name,usersaccounts.id ").ToListAsync();
+            var orItems = await _context.Report.FromSqlRaw("select usersaccounts.id as Id, name as customername, sum (quantity * Price)  as total from book, [order],usersaccounts  where usersaccounts.id = [order].userid  and bookid= book.Id group by name,usersaccounts.id ").ToListAsync();
             return View(orItems);
         }
 

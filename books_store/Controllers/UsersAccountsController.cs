@@ -137,8 +137,9 @@ namespace books_store.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,pass,email")] UsersAccounts usersAccounts)
+        public async Task<IActionResult> Edit([Bind("Id,name,pass,email")] UsersAccounts usersAccounts)
         {
+            int id = Convert.ToInt32(HttpContext.Session.GetString("userid"));
             if (id != usersAccounts.Id)
             {
                 return NotFound();
@@ -160,7 +161,7 @@ namespace books_store.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Catalogue"); 
+                return RedirectToAction("Books","Catalogue"); 
         }
 
         // GET: UsersAccounts/Delete/5
